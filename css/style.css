@@ -1,0 +1,5 @@
+body { background-color:#000000; font-weight:bold; font-family:Arial; font-size:120%; }
+td,th {text-align: center;}
+tr {height:300px}
+table {width:100%;}
+.status { background-color:#FF0000; font-size:30px;padding:6px; margin:0px; }

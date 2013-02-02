@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>WebWorksCopter</title>
+  <script>
+	var meta = document.createElement("meta");
+	meta.setAttribute('name','viewport');
+	meta.setAttribute('content','initial-scale='+ (1/window.devicePixelRatio) + ',user-scalable=no');
+	document.getElementsByTagName('head')[0].appendChild(meta);
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="local:///chrome/webworks.js"></script>
+  <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="js/flightbook.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+   <script>
+	document.addEventListener('webworksready', function(e) {
+		// This is a hack for Ripple calling webworksready multiple times
+		if (rippleLoaded) return;
+		rippleLoaded = true;
+		
+		if (community.templateExt) {
+			console.log("Extension working.");
+		}
+		
+	}, false);
+   </script>	
+
+</head>
+<body>
+	
+	<table id="flightmode">
+	<tr>
+	  <td><img src="icons/rotate_left.png" id="rotateLeft"/></td>
+	  <td></td>
+	  <td><img src="icons/forward.png" id="moveForward"/></td>
+	  <td></td>
+	  <td><img src="icons/up.png" id="takeoff"/></td>
+	</tr>
+	<tr>
+	  <td></td>
+	  <td><img src="icons/left.png" id="moveLeft"/></td>
+	  <td><img src="icons/startup.png" id="start" /></td>
+      <td><img src="icons/right.png" id="moveRight" /></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td><img src="icons/rotate_right.png" id="rotateRight"/></td>
+	  <td></td>
+	  <td><img src="icons/back.png" id="moveBackward"/></td>
+	  <td></td>
+	  <td><img src="icons/down.png" id="land" /></td>
+	</tr>
+	</table>	
+
+	<div class="status">Status:</div>
+	<div class="status" id="statusWindow"></div>
+
+</body>
+
+</html>
