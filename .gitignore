@@ -2,3 +2,4 @@
 device/
 simulator/
 *.zip
+.DS_Store
